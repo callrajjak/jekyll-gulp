@@ -1,0 +1,76 @@
+.home-wrap
+  display: flex
+  min-height: 100vh
+
+  .home-sections
+    flex: 1
+
+    section
+      padding: 50px 0
+
+
+      // flex classes
+    .flex
+      display: flex
+      flex-direction: row
+
+    .flex--center
+      justify-content: center
+
+    .flex--space-around
+      justify-content: space-around
+
+    .order-first
+      order: -1
+
+
+  @media (max-width: 775px)
+    display: block
+
+
+
+// columns css
+
+.col-1
+  max-width: 300px
+  margin: 0 10px
+
+.col-2
+  max-width: 620px
+  padding: 0 10px
+  background: honeydew
+
+.col-50
+  width: 50%
+
+// typography
+
+.home-lead
+  font:
+    size: 36px
+  line-height: 1.1
+
+  &.outdented
+    text-indent: -1.1em
+
+.push-right
+  margin-left: 330px
+
+@media (max-width: 640px)
+  .home-wrap .home-sections .flex
+    display: block
+
+  .col-1
+    max-width: 100%
+
+  .col-50
+    width: auto
+
+  .push-right
+    margin-left: 10px
+
+  .home-lead
+    text-align: center
+
+    &.outdented
+      text-indent: 0

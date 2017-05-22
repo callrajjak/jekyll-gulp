@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title }} @ {% endif %} TN</title>
     <meta name="viewport" content="width=device-width">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
+    {% if page.type== "post" %} {{ page.styles }} {% endif %}
+    <script src="/assets/js/jquery-3.2.1.js"></script>
+    <script src="/assets/js/functions.js"></script>
   </head>
+  <body class="{% if page.home %} home blog logged-in{% endif %} {{ page.type}} {% if page.body-name %} {{ page.body-name }} {% endif %}">
   <body>
+
     {{ content }}
+
+    <!--{% if page.url == "/index.html" %}
+    <script src="/assets/js/functions.js"></script>
+    {% endif %}-->
   </body>
 </html>

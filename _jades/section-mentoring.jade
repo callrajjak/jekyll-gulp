@@ -1,0 +1,22 @@
+mixin face(face,words,author)
+  li.face(style="background-image: url(#{face});background-size: cover;")
+    .bubble
+      p  #{words}
+      cite - #{author}
+
+
+section.mentoring
+  .flex.flex--center
+    .col-1
+      ul.faces
+        +face("../assets/images/testimonial-avatars/andrew.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,","Nathan Jacobs")
+        +face("../assets/images/testimonial-avatars/gareth.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,","Nathan Jacobs")
+        +face("../assets/images/testimonial-avatars/joey.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,","Nathan Jacobs")
+        +face("../assets/images/testimonial-avatars/kim.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,","Nathan Jacobs")
+        +face("../assets/images/testimonial-avatars/lj.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,","Nathan Jacobs")
+        +face("../assets/images/testimonial-avatars/mary.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,","Nathan Jacobs")
+        li.back-btn.face
+  
+    .col-1
+      p.home-lead.outdented ...Mentoring people like you...
+      a(href="#").home-cta Schedule a Call
